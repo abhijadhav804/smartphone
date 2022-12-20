@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One plus 10R pro</title>
+    <link rel=" shortcut icon" href="/images/oneplus-logo.png">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="/images/logo.png">
+            </div>
+            <div class="nav-links">
+                <li><a href="#"> Home</a></li>
+                <li><a href="#"> Phone</a></li>
+                <li><a href="#"> accessories</a></li>
+                <li><a href="#"> Cart</a></li>
+
+
+            </div>
+        </nav>
+        <div class="information">
+            <div class="mobileimg">
+                <img src="/images/samsungt-mobile-removebg-preview.png" id="sam">
+                <img src="/images/iphone_11_PNG20.png" id="ip">
+                <img src="/images/oneplus-ace-pro..png" id="one">
+
+            </div>
+            <div class="overlay">
+            </div>
+            <div class="mobile" id="mobile1">
+
+
+            </div>
+            <div id="circle">
+                <div class="feature one">
+                    <img src="/images/camera.png">
+                    <div>
+                        <h1> camera</h1>
+                        <p id="mp">45mp Rere </p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="/images/processor.png">
+                    <div>
+                        <h1> Processor</h1>
+                        <p> Snapdragon Android Q 12 Dual Core</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="/images/display.png">
+                    <div>
+                        <h1>Display</h1>
+                        <p id="di"> 17.02cm(6.7 inch)</p>
+                    </div>
+
+                </div>
+                <div class="feature four">
+                    <img src="/images/battery.png">
+                    <div>
+                        <h1>Battery life</h1>
+                        <p id="bat">5000mAh, 720Hrs Standby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+
+            <h1 id="upBtn"> <</h1> 
+            
+
+            <h3> Features</h3>
+            <h1 id="downBtn"><</h1>
+
+            <div class="brand">
+                <img src="/images/oneplus-logo.png" id="ibtn">
+                <img src="/images/apple-icon-21.png" id="rBtn">
+                <img src="/images/2-24755_samsung-logo-black-and-white-iheartradio-logo-white.png" id="sbtn">
+                
+            </div>
+
+        </div>
+        
+    </div>
+
+</body>
+<script>
+
+    var circle = document.getElementById("circle");
+    var upBtn = document.getElementById("upBtn");
+    var downBtn = document.getElementById("downBtn");
+    var rotateValue = circle.style.transform;
+    var rotateSum;
+    let mobile = document.getElementById("mobile1");
+    let rBtn = document.getElementById("rBtn");
+    let iBtn = document.getElementById("ibtn");
+    let sBtn = document.getElementById("sbtn");
+
+    let mp  = document.getElementById("mp");
+    let ds  = document.getElementById("di");
+    let bat = document.getElementById("bat");
+
+
+    upBtn.onclick = function () {
+        rotateSum = rotateValue + " rotate(-90deg)"
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+    }
+
+
+
+    downBtn.onclick = function () {
+        rotateSum = rotateValue + " rotate(90deg)"
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+    }
+
+ 
+    rBtn.onclick = function () {
+        
+        mobile.style.backgroundImage = "url(images/iphone_11_PNG20.png)";
+        mp.innerHTML= "12mp Rear Camara"
+        ds.innerHTML= "16.02cm(7.5 inch)"
+        bat.innerHTML= "5000mAh, 720Hrs Standby"
+       
+        
+    }
+    ibtn.onclick = function () {
+        
+        mobile.style.backgroundImage = "url(images/oneplus-ace-pro..png)";
+        mp.innerHTML= " 45Mp Ultra"
+        ds.innerHTML= "15.02cm(6.5 inch)"
+        bat.innerHTML= "5000mAh, 720Hrs Standby"
+       
+       
+        
+    }
+    sbtn.onclick = function () {
+        
+        mobile.style.backgroundImage = "url(images/samsungt-mobile-removebg-preview.png)";
+        mp.innerHTML= "105mp Rear Camara"
+        ds.innerHTML= "15.02cm(6.5 inch)"
+        bat.innerHTML= "5000mAh, 720Hrs Standby"
+       
+        
+    }
+    
+
+
+
+
+
+
+
+
+</script>
+
+</html>
